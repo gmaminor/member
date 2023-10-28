@@ -1,10 +1,8 @@
 package com.association.member.model;
 
 import com.association.member.dto.MemberDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,6 +18,8 @@ public class Member {
     private Integer id;
     private String firstName;
     private String lastName;
+
+    @Column(unique = true,length = 20)
     private String phone;
     private LocalDate dateOfBirth;
 

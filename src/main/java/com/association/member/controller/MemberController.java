@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     private final MemberServiceImpl memberServiceImpl;
-    @GetMapping(path="/member")
+    @GetMapping()
     public String fetchMember(HttpServletRequest request){
         return "member";
     }
